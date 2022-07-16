@@ -123,7 +123,7 @@ let App: React.FC =() => {
                     <Button onClick={nextQuestion}  className='fw-bold text-light mt-4' variant='warning'>{number + 1 !== data?.length  ? 'Next question' : 'Home'}</Button> 
                     : null}
                </Container>
-               <footer className="position-absolute bottom-0 start-50 translate-middle-x text-primary fw-bold fs-5 mb-2 mt-3">Created by Vitalik Golubovich</footer>
+               <footer className="position-absolute bottom-0 start-50 translate-middle-x text-center text-primary fw-bold fs-5 mb-2 mt-3">Created by Vitalik Golubovich</footer>
           </div>
      );
 }
