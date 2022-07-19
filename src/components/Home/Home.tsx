@@ -12,8 +12,10 @@ const Home: React.FC = () => {
 
      return (
           <>
-               <p className="fs-4 text-light">A cool quiz with a variety of topics !</p> 
-               <Button onClick={toForm} className='fs-5 w-25 text-secondary' variant="warning"  style={{ marginTop: '80px'}} >Start</Button>
+               <div className="  flex-grow-0 d-flex justify-content-center align-items-center flex-column">
+                    <p className="text-center fs-4 text-light">A cool quiz with a variety of topics !</p> 
+                    <Button onClick={toForm} className='fs-5 w-25 text-secondary' variant="warning"  style={{ marginTop: '80px'}} >Start</Button>
+               </div>
           </>
      )
 }

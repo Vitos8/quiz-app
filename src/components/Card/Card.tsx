@@ -17,12 +17,14 @@ interface Props {
 
 const Card:React.FC<Props> = ({Loader, questionNr, totalQuestions, question, answers,callback, category, difficulty, score, userAnswer} ) => {     
 
+
+
      return (Loader ?
           <Spinner  animation="border" variant="success"  style={{ width: '3rem', height: '3rem', borderWidth: '6px' }} />  :
           <>
                <div className="d-flex   gap-5 mb-3">
-                    <div className="fs-4 fw-bold"><span className='text-warning'>Category :</span> {category}</div>
-                    <div className="fs-4 fw-bold"><span className='text-warning'>Difficulty :</span> {difficulty}</div>
+                    <div className="d-flex justify-content-center align-items-center flex-column fs-4 fw-bold"><span className='text-warning'>Category :</span> {category}</div>
+                    <div className="d-flex justify-content-center align-items-center flex-column fs-4 fw-bold"><span className='text-warning'>Difficulty :</span> {difficulty}</div>
                </div>
                <div className="fs-2 fw-bold mb-4"><span className='text-warning'>Score: </span> {score}</div>
                <div className="bc d-flex justify-content-center align-items-center flex-column  fw-bold">

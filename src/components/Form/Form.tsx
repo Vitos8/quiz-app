@@ -13,6 +13,7 @@ const Forms:React.FC<FormsProps> = ({onRequest}:FormsProps) => {
      const [rangeValue, setRangeValue] = useState(Limit?.current?.value);
      let navigate = useNavigate();
 
+     
 
      const options = [
           {
@@ -83,20 +84,20 @@ const Forms:React.FC<FormsProps> = ({onRequest}:FormsProps) => {
      }
 
      return (
-          <Form  className='d-flex justify-content-center align-items-center flex-column ' onSubmit={handleSubmit}>
-               <Form.Label className='fs-2 text-warning'>Сhoose a topic</Form.Label>
+          <Form  className='d-flex justify-content-center align-items-center flex-column wrapper flex-grow-1' onSubmit={handleSubmit}>
+               <Form.Label className='l fs-2 text-warning'>Сhoose a topic</Form.Label>
                <Form.Select value={topicValue}  onChange={(e) => setTopicValue(e.target.value)} className='mt-3 mb-5'  size="lg"  aria-label="Select Topic">
                     {options.map(item => (
                          <option key={item.key} value={item.value}>{item.name}</option>
                     ))}
                </Form.Select>
-               <Form.Label className='fs-2 text-warning'>Сhoose difficulty</Form.Label>
+               <Form.Label className=' fs-2 text-warning'>Сhoose difficulty</Form.Label>
                <Form.Select value={difficultyValue} onChange={(e) => setDifficultyValue(e.target.value)}  className='mt-3 mb-5'  size="lg" aria-label="Select Difficulty" >
                     <option value="easy">Easy</option>
                     <option value="medium">Medium</option>
                     <option value="hard">Hard</option>
                </Form.Select>
-               <Form.Label className='fs-2 text-warning mb-4' >Сhoose the number of questions</Form.Label>
+               <Form.Label className=' fs-4 text-center text-warning mb-4' >Сhoose the number of questions</Form.Label>
                <p className='fs-5 text-dark'>{rangeValue ? rangeValue : 6 }</p>
                <Form.Range  className='mb-3 bg-light p-3 rounded'  onChange={() => setRangeValue(Limit?.current?.value)} ref={Limit} min='1' max='10'   />
                <Button   className='fs-5 mt-5' type="submit">Submit form</Button>

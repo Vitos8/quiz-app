@@ -100,7 +100,7 @@ let App: React.FC =() => {
                     }} 
                     show={show} 
                     score={score}/>
-               <Container className='d-flex justify-content-center align-items-center flex-column pt-1 pb-5'>
+               <Container className='d-flex justify-content-center align-items-center flex-column pt-1 pb-5 min-vh-100'>
                     <h1 className='display-1 my-4  '>REACT QUIZ</h1>
                     <Routes>
                          <Route path="/"  element={<Home/>} />
@@ -123,7 +123,7 @@ let App: React.FC =() => {
                     <Button onClick={nextQuestion}  className='fw-bold text-light mt-4' variant='warning'>{number + 1 !== data?.length  ? 'Next question' : 'Home'}</Button> 
                     : null}
                </Container>
-               <footer className="position-absolute bottom-0 start-50 translate-middle-x text-center text-primary fw-bold fs-5 mb-2 mt-3">Created by Vitalik Golubovich</footer>
+               <footer className=" w-auto bg-light text-center text-primary fw-bold fs-5 pb-4 pt-4">Created by Vitalik Golubovich</footer>
           </div>
      );
 }
